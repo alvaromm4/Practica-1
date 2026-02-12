@@ -10,7 +10,6 @@ public class MovingPlatformClase : MonoBehaviour
 
     private Rigidbody rb;
 
-    // esta variable indica si la plataforma se estt? moviendo hacia la posici?n final
     private bool voyALaFinal = false;
 
     private void Start()
@@ -23,7 +22,6 @@ public class MovingPlatformClase : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    // Utilizamos fixedUpdate cuando movemos/aplicamos fuerzas/aplicamos velociad a un RIGIDBODY
     private void FixedUpdate()
     {
         Vector3 posActual = transform.position;
@@ -60,11 +58,8 @@ public class MovingPlatformClase : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        // Comprobamos si lo que nos ha pisado es el jugador
-        // (Asegúrate de que tu personaje tenga el Tag "Player")
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Hacemos que el jugador sea hijo de la plataforma
             collision.gameObject.transform.SetParent(transform);
         }
     }
@@ -73,7 +68,6 @@ public class MovingPlatformClase : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Al salir, le quitamos el padre (vuelve a ser independiente)
             collision.gameObject.transform.SetParent(null);
         }
     }
