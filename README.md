@@ -1,7 +1,9 @@
 # Práctica 1 - Desarrollo de Videojuegos
 
-**Autor:** Álvaro Morazo Mosquera 
+**Autor:** Álvaro Morazo Mosquera
+
 **Curso:** 4º Ingeniería Informática  
+
 **Profesora:** Elisa Todd
 
 ## 1. Descripción del Proyecto
